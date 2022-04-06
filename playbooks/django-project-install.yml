@@ -3,7 +3,7 @@
 
   vars:
     app_dir: "{{user_dir}}/django-project"
-    git_repo_url: "git@github.com:tsadimas/django3-sampe-project.git"
+    git_repo_url: "git@github.com:Ancairon/django3-sampe-project.git"
     git_repo_branch: "main"
 
   tasks:
@@ -25,13 +25,10 @@
   - name: print user name
     debug:
       msg: "login user is {{login_user}}"
-<<<<<<< HEAD
-=======
 
   - name: print user dir
     debug:
       msg: "login dir is {{user_dir}}"
->>>>>>> dde3284519a8d9ea141460600834886318304133
 
   - name: ensure github.com is a known host
     lineinfile:
@@ -63,12 +60,6 @@
     with_items:
       - "{{django.env | dict2items}}"
 
-<<<<<<< HEAD
-
-  - name: print ip
-    debug:
-      msg: "ALLOWED_HOSTS={{ansible_all_ipv4_addresses}}"
-=======
   - name: Get my public IP
     ipify_facts:
 
@@ -77,7 +68,7 @@
   # - name: print ip
   #   debug:
   #     msg: "ALLOWED_HOSTS={{ansible_all_ipv4_addresses}}"
->>>>>>> dde3284519a8d9ea141460600834886318304133
+
 
   - name: add ip in django ALLOWED_HOSTS
     lineinfile:
