@@ -1,5 +1,1 @@
 ansible_python_interpreter: /usr/bin/python3
-<<<<<<< HEAD
-=======
-app_user: vagrant
->>>>>>> dde3284519a8d9ea141460600834886318304133
